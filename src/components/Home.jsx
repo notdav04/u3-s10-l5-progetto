@@ -65,7 +65,7 @@ const Home = () => {
                 </Form.Label>
                 <Form.Control
                   className="my-3"
-                  as="textarea"
+                  type="text"
                   rows={1}
                   value={city}
                   onChange={(e) => {

@@ -136,15 +136,15 @@ const Details = () => {
               <div className="d-flex justify-content-center mt-4">
                 <Container className="w-50">
                   <Row className="text-center">
-                    <Col sm={4}>
+                    <Col xs={3}>
                       <i className="bi bi-wind text-light fs-1"></i>
                       <p className="text-light fs-4">{objWeather.wind.speed}</p>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={6}>
                       <i className="bi bi-eye text-light fs-1"></i>
                       <p className="text-light fs-4">{objWeather.visibility}</p>
                     </Col>
-                    <Col sm={4}>
+                    <Col xs={3}>
                       <i className="bi bi-droplet text-light fs-1"></i>
                       <p className="text-light fs-4">
                         {objWeather.main.humidity}%
@@ -161,20 +161,35 @@ const Details = () => {
                       return (
                         <ListGroup.Item
                           key={index}
-                          className="rounded-3 border border-1 border-white-subtle bg-transparent mb-3"
+                          className="rounded-3 border border-1 border-white-subtle bg-transparent mb-1 mb-sm-3"
                         >
-                          <Row>
-                            <Col xs={3}>
-                              <p className="mb-0">
+                          <Row className="text-light">
+                            <Col xs={2} className="p-0">
+                              <p className="mb-0 d-inline-block">
                                 {element.dt_txt.slice(5, 10)}
                               </p>
                             </Col>
-                            <Col xs={5}>
+                            <Col xs={2}>
+                              <p className="mb-0">{element.main.temp}°</p>
+                            </Col>
+                            <Col xs={3}>
                               <p className="mb-0">
-                                {element.main.temp}° -- min:
-                                {element.main.temp_min}° -- max:
-                                {element.main.tamp_max}°
+                                min:
+                                {" " + element.main.temp_min}°
                               </p>
+                            </Col>
+                            <Col xs={3}>
+                              <p className="mb-0">
+                                max:
+                                {" " + element.main.temp_max}°
+                              </p>
+                            </Col>
+                            <Col xs={1}>
+                              <img
+                                src={`https://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`}
+                                alt=""
+                                style={{ height: "30px" }}
+                              />
                             </Col>
                           </Row>
                         </ListGroup.Item>

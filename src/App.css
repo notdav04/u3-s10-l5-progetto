@@ -8,6 +8,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .buble {
@@ -21,12 +22,12 @@ body {
   width: 500px;
 }
 .details {
-  height: 800px;
+  height: 850px;
   width: 650px;
 }
 
 .fs-home {
-  font-size: 8rem;
+  font-size: 3rem;
 }
 .circle-temp {
   border-top: 1px solid #ffffff;
@@ -39,4 +40,10 @@ body {
     rgba(0, 4, 69, 1) 57%,
     rgba(0, 30, 255, 1) 90%
   );
+}
+
+@media screen and (min-width: 768px) {
+  .fs-home {
+    font-size: 8rem;
+  }
 }

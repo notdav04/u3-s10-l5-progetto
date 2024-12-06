@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <Container
       fluid
-      className=" m-0 d-flex align-items-center "
+      className=" m-0 d-md-flex align-items-center "
       style={{ height: "calc(100vh - 56px)", overflowX: "hidden" }}
     >
       <Row className="w-100">

@@ -1,0 +1,42 @@
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 4, 69, 1) 57%,
+    rgba(0, 30, 255, 1) 90%
+  );
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.buble {
+  background-color: rgba(255, 255, 255, 0.259);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  box-shadow: 9px 9px 18px 0px #000000;
+}
+.home {
+  height: 250px;
+  width: 500px;
+}
+.details {
+  height: 800px;
+  width: 650px;
+}
+
+.fs-home {
+  font-size: 8rem;
+}
+.circle-temp {
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  box-shadow: 9px 9px 18px 0px #000000;
+  font-size: 30px;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 4, 69, 1) 57%,
+    rgba(0, 30, 255, 1) 90%
+  );
+}

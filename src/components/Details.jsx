@@ -136,15 +136,19 @@ const Details = () => {
                   <Row className="text-center">
                     <Col xs={3}>
                       <i className="bi bi-wind text-light fs-1"></i>
-                      <p className="text-light fs-4">{objWeather.wind.speed}</p>
+                      <p className="text-light fs-6">
+                        {objWeather.wind.speed}m/s
+                      </p>
                     </Col>
                     <Col xs={6}>
                       <i className="bi bi-eye text-light fs-1"></i>
-                      <p className="text-light fs-4">{objWeather.visibility}</p>
+                      <p className="text-light fs-6">
+                        {objWeather.visibility}m
+                      </p>
                     </Col>
                     <Col xs={3}>
                       <i className="bi bi-droplet text-light fs-1"></i>
-                      <p className="text-light fs-4">
+                      <p className="text-light fs-6">
                         {objWeather.main.humidity}%
                       </p>
                     </Col>

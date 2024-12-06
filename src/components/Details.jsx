@@ -42,7 +42,7 @@ const Details = () => {
         );
         if (response.ok) {
           const responseObj = await response.json();
-          //codice bruttarello, ma frutto del pensiero logico
+          //codice bruttarello, ma fatto da me
           //controllo per prendermi i 5 giorni a 12:00:00
           const notToday = responseObj.list.filter((element) => {
             return element.dt_txt.split(" ")[1] === "12:00:00"; //filtro per vedere dove (dopo aver splittato la stringa dt_txt la 2a parte è uguale a 12:00:00)

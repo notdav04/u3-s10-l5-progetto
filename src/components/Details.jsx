@@ -116,7 +116,7 @@ const Details = () => {
                   </p>
                 </div>
                 <p className="text-light d-flex align-items-center fs-4">
-                  Percepita: {objWeather.main.feels_like}
+                  Percepiti: {Math.floor(objWeather.main.feels_like)}°
                 </p>
                 <div
                   className=" mt-3 rounded-circle bg-dark d-flex  justify-content-center align-items-center circle-temp"

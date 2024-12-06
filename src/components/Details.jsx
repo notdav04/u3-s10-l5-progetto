@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Row, Col, ListGroup } from "react-bootstrap";
 
 const Details = () => {
@@ -11,7 +11,7 @@ const Details = () => {
   const [objWeather, setObjWeather] = useState(null);
   const [obj5days, setObj5Days] = useState();
   const today = new Date().toISOString().split("T")[0];
-
+  const navigate = useNavigate();
   //   console.log("today:", today);
 
   const fetchWeather = async () => {
@@ -76,7 +76,7 @@ const Details = () => {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "calc(100vh - 56px)" }}
       >
-        <div className="buble details rounded-5 px-2">
+        <div className="buble details rounded-5 px-2 position-relative">
           {objWeather && (
             <div className="m-3">
               <div className="d-flex justify-content-center">
@@ -197,6 +197,14 @@ const Details = () => {
               </div>
             </div>
           )}
+          <button
+            className="buble button-buble rounded-circle  "
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <i className="text-light bi bi-arrow-left"></i>
+          </button>
         </div>
       </Container>
     </>

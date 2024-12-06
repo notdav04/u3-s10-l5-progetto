@@ -21,6 +21,11 @@ body {
   box-shadow: 9px 9px 18px 0px #000000;
   font-family: "Roboto";
 }
+.button-buble {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
 .home {
   height: 250px;
   width: 500px;

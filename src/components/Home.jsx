@@ -1,12 +1,11 @@
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const apikey = "c88260ced423f33c6a139f277053ce86";
   const [city, setCity] = useState("");
-  // const [lat, setLat] = useState("");
-  // const [lon, setLon] = useState("");
+
   const navigate = useNavigate();
 
   const fetchLatLon = async () => {

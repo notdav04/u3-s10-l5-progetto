@@ -4,16 +4,15 @@ import { useParams } from "react-router-dom";
 import { Row, Col, ListGroup } from "react-bootstrap";
 
 const Details = () => {
-  console.log("------------------------------------details");
-
+  //   console.log("------------------------------------details");
   const apikey = "c88260ced423f33c6a139f277053ce86";
   const { lat, lon } = useParams();
-  console.log(lat, lon);
+  //   console.log(lat, lon);
   const [objWeather, setObjWeather] = useState(null);
   const [obj5days, setObj5Days] = useState();
   const today = new Date().toISOString().split("T")[0];
 
-  console.log("today:", today);
+  //   console.log("today:", today);
 
   const fetchWeather = async () => {
     try {
@@ -49,7 +48,7 @@ const Details = () => {
             return element.dt_txt.split(" ")[1] === "12:00:00"; //filtro per vedere dove (dopo aver splittato la stringa dt_txt la 2a parte è uguale a 12:00:00)
           });
 
-          console.log("nottoday---------", notToday);
+          //   console.log("nottoday---------", notToday);
           if (notToday[0].dt_txt.split(" ")[0] === today) {
             //controllo che il primo elemento non sia riferito ad oggi
             setObj5Days(notToday.slice(1));
@@ -90,7 +89,6 @@ const Details = () => {
                     />
                   </div>
 
-                  {console.log(objWeather.weather[0].icon)}
                   <div
                     className="rounded-circle bg-dark d-flex justify-content-center align-items-center circle-temp"
                     style={{ height: "100px", width: "100px" }}
